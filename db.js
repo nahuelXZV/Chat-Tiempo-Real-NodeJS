@@ -1,6 +1,6 @@
 const db = require('mongoose');
 
-db.Promise = global.Promise;
+db.Promise = global.Promise; 
 
 async function connect() {
     await db.connect('mongodb+srv://nahuel:Fireware123@nahuelxzv.8vcvv0p.mongodb.net/?retryWrites=true&w=majority', {

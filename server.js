@@ -3,13 +3,13 @@ const bodyParser = require('body-parser');
 const router = require('./network/routes');
 const db = require('./db');
 
-db();
+db(); // Connect to database
 
-const app = express();
-app.use(bodyParser.json());
-router(app);
+const app = express(); // Create express app
+app.use(bodyParser.json()); // Parse JSON body
+router(app);        // Register routes
 
-app.use('/app', express.static('public'));
+app.use('/app', express.static('public')); 
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');

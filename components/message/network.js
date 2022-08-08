@@ -6,12 +6,6 @@ const controller = require('./controller');
 router.get('/', (req, res) => {
 
     const filterMessages = req.query.user || null;
-
-    res.header({
-        'custom-header': 'Nuestro valor personalizado',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-    });
     controller.getMessages(filterMessages)
         .then((messageList) => {
             response.success(req, res, messageList, 200);

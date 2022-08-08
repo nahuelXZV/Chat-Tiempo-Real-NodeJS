@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-basic",
+  "name": "chat-nodejs",
   "version": "1.0.0",
   "description": "Curso de chat con nodejs",
   "main": "server.js",
@@ -8,7 +8,8 @@
   },
   "keywords": [
     "nodejs",
-    "chat"
+    "chat",
+    "websockets"
   ],
   "author": "Nahuel Zalazar Villca",
   "license": "MIT",
