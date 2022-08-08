@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+    
+    <h1>chat en consola</h1>
+
+    <script>
+        const socket = io.connect('http://localhost:3000',{
+            forceNew: true
+        });
+
+        socket.on('connect', () => {
+            console.log('Connected to server');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('Disconnected from server');
+        });
+
+        socket.on('message', (message) => {
+            console.log('New message', message);
+        });
+    </script>
+</body>
+</html>
